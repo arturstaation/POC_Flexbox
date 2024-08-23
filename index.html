@@ -13,7 +13,8 @@
                     <li>Principais Conceitos</li>
                     <li>Como Usar</li>
                     <li>Orientação</li>
-                    <li>Como Se Aplica</li>
+                    <li>Wrap</li>
+                    <li>Quando Utilizar</li>
                     <li>Referencias</li>
                 </ul>
             </nav>
@@ -66,7 +67,7 @@
             </section>
             <section class="usar_flexbox">
                 <h1>Como usar Flexbox</h1>
-                <p>Agora que você já entende os conceitos básicos , vamos à prática. Para começar, adicione a seguinte propriedade ao seletor CSS do seu elemento: <strong>display: flex</strong>.</p>
+                <p>Agora que você já entende os conceitos básicos , vamos à prática. Para começar, adicione a seguinte propriedade ao seletor CSS do seu elemento: <code>display: flex</code> .</p>
                 <p>Mais importante do que saber como aplicar essa propriedade é entender quando e onde usá-la. A propriedade Flexbox deve ser aplicada a um elemento pai para organizar o layout dos seus elementos filhos. Isso permite que você controle a distribuição do espaço e o alinhamento dos itens dentro do contêiner.</p>
             </section>
             <section class="orientar_flexbox">
@@ -74,7 +75,7 @@
                 <div class = "orientacao_principal">
                 <h2>Orientação Principal</h1>
                 <p>O eixo principal, como dito anteriormente, define a direção na qual os elementos serão inseridos.
-                    Para definir essa direção deve-se adicionar, além da propriedade para atribuir ao componente o display flexivel, a propriedade <code>flex-direction</code>.
+                    Para definir essa direção deve-se adicionar, além da propriedade para atribuir ao componente o display flexivel, a propriedade <code>flex-direction</code> .
                     No entanto, ela por si so não muda nada. Para que ela tenha funcionamento adequado deve-se atribuir um parametro a ela. Esses parametros podem ser:
                 </p>
                 <h4>row</h2>
@@ -140,8 +141,21 @@
                 <btn>D</btn>
             </div>
             </section> 
+        <section>
+            <h2>Wrap</h2>
+            <p>Ao trabalhar com layouts, você pode encontrar o problema de que os itens não cabem em uma única linha dentro do contêiner. Isso é especialmente comum em designs responsivos ou quando o número de itens excede o espaço disponível. 
+                Por padrão, o Flexbox organiza todos os itens em uma única linha, o que pode levar a problemas de sobreposição ou itens sendo forçados a sair do contêiner. 
+                Para contornar esse problema e permitir que os itens sejam organizados em várias linhas, pode-se usar a propriedade <code>flex-wrap</code>.</p> 
+            <p>Para utilizar <code>flex-wrap</code> de forma eficaz, você deve definir o contêiner com display flexível e aplicar a propriedade com um dos seguintes valores:</p> 
+            <h4>nowrap</h4> 
+            <p>É o valor padrão. Os itens são dispostos em uma única linha, sem quebrar para novas linhas. Se o espaço disponível não for suficiente, os itens podem ser comprimidos ou ultrapassar o contêiner.</p> 
+               <h4>wrap</h4>
+               <p>Os itens quebram e se movem para novas linhas quando o espaço na linha atual é insuficiente. Isso permite que os itens se ajustem ao tamanho do contêiner e sejam organizados de forma mais ordenada.</p> 
+                <h4>wrap-reverse</h4>
+                <p>Similar ao <code>wrap</code>, mas as novas linhas são adicionadas acima da linha inicial, em vez de abaixo. Isso inverte a direção das linhas adicionais, permitindo diferentes padrões de layout.</p>
+                </section>
         </section class = "como_se_aplica">
-        <h2>Como Se Aplica</h2>
+        <h2>Quando Utilizar</h2>
         <section>
             <section class="referencias">
                 <h1>Referencias</h1>
