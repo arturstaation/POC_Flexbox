@@ -4,7 +4,7 @@
 }
 
 main {
-    margin: 0 25%;
+    margin: 0 15%;
 }
 
 .cabecalho {
@@ -103,12 +103,20 @@ main {
 #container_wrap p {
     flex-grow: 10;
 }
-
-#container_align-content {
+#container_align-content{
     flex-wrap: wrap;
+}
+
+#container_align-items{
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 400px;
 }
 
 .break {
     flex-basis: 100%;
     height: 0;
+}
+.teste{
+    width: 250px;
 }

@@ -15,9 +15,9 @@
                 <li><a href="#definicao_flexbox">O que é</a></li>
                 <li><a href="#principais_conceitos">Principais Conceitos</a></li>
                 <li><a href="#usar_flexbox">Como Usar</a></li>
-                <li><a href="#orientar_flexbox">Alinhar Items</a></li>
+                <li><a href="#orientar_flexbox">Disposição</a></li>
                 <li><a href="#secao_wrap">Wrap</a></li>
-                <li><a href="#orientar_wrap">Alinhar Linhas</a></li>
+                <li><a href="#orientar_wrap">Disposição das Linhas</a></li>
                 <li><a href="#como_se_aplica">Quando Utilizar</a></li>
                 <li><a href="#referencias">Referencias</a></li>
             </ul>
@@ -25,12 +25,11 @@
     </header>
     <main>
         <section class="banner_inicial">
-            <h2 class="banner_inicial_menor">O que você precisa saber sobre</h1>
-                <h1><strong>FLEXBOX</strong></h1>
+            <h1>O que você precisa saber sobre <strong>Flexbox</strong> e quando usar</h1>
         </section>
 
         <section class="definicao_flexbox separador_secao" id="definicao_flexbox">
-            <h1>O que é FlexBox</h1>
+            <h2>O que é FlexBox</h2>
             <div class="texto_definicao_flexbox">
                 <p>Durante muito tempo, as únicas tecnicas disponíveis para a criação de layouts usando CSS e
                     posicionamento de elementos, e com boa compatibilidade entre browsers, eram float e position.
@@ -38,7 +37,7 @@
                     Visto isso, essa ferramente foi criada para simplificar, sem perder a funcionalidade, essas tarefas,
                     além de aumentar a eficiencia.
                 </p>
-                <h3>Que tal afrondar mais um pouco essa definição?</h3>
+                <h3>Que tal aprofundar mais um pouco essa definição?</h3>
                 <p>Flexbox, ou Flexible Box Layout, é um modelo de layout em CSS que facilita a criação de layouts
                     complexos e responsivos. Ele foi desenvolvido para resolver problemas comuns com o posicionamento e
                     alinhamento de elementos dentro de um contêiner.
@@ -48,7 +47,7 @@
             </div>
         </section>
         <section class="principais_conceitos separador_secao" id="principais_conceitos">
-            <h1>Princiapais Conceitos</h1>
+            <h2>Princiapais Conceitos</h2>
             <div class="texto_principais_conceitos">
                 <p>Para entender e manipular melhor o layout flexivel, você precisa saber alguns conceitos.</p>
                 <dl>
@@ -77,7 +76,7 @@
             </div>
         </section>
         <section class="usar_flexbox separador_secao" id="usar_flexbox">
-            <h1>Como usar Flexbox</h1>
+            <h2>Como usar Flexbox</h2>
             <div class="texto_usar_flexbox">
                 <p>Agora que você já entende os conceitos básicos , vamos à prática. Para começar, adicione a seguinte
                     propriedade ao seletor CSS do seu elemento: <code>display: flex</code> .</p>
@@ -88,9 +87,8 @@
             </div>
         </section>
         <section class="orientar_flexbox separador_secao" id="orientar_flexbox">
-            <h1>Orientação</h1>
+            <h2>Disposição dos Elementos Na FlexBox</h2>
             <div class="orientacao_principal">
-                <h2>Orientação Principal</h1>
                     <p>O eixo principal, como dito anteriormente, define a direção na qual os elementos serão inseridos.
                         Para definir essa direção deve-se adicionar, além da propriedade para atribuir ao componente o
                         display flexivel, a propriedade <code>flex-direction</code> .
@@ -114,7 +112,7 @@
             </div>
             <div>
 
-                <h2>Exemplo Align-Items</h2>
+                <h3>Exemplo Flex-Direction</h3>
                 <p>Para entender melhor o que foi explicado anteriormente, interaja com o exemplo abaixo. Clique no
                     botão com o tipo de orientação desejado e veja como ele se comporta</p>
                 <div class="exemplo">
@@ -125,15 +123,16 @@
                         <p>Elemento 4</p>
                     </container>
                     <div class="botoes_exemplo">
-                        <btn onclick="changeDirection('row')">Row</btn>
-                        <btn onclick="changeDirection('row-reverse')">Row-Reverse</btn>
-                        <btn onclick="changeDirection('column')">Column</btn>
-                        <btn onclick="changeDirection('column-reverse')">Column-Reverse</btn>
+                        <h4>Controlar Flex-Direction</h4>
+                        <btn onclick="changeDirection('row', 'container_orientação_principal')">Row</btn>
+                        <btn onclick="changeDirection('row-reverse', 'container_orientação_principal')">Row-Reverse</btn>
+                        <btn onclick="changeDirection('column', 'container_orientação_principal')">Column</btn>
+                        <btn onclick="changeDirection('column-reverse', 'container_orientação_principal')">Column-Reverse</btn>
                     </div>
                 </div>
             </div>
             <div class="orientacao_secundaria">
-                <h2>Orientação Eixo Secundario</h2>
+                <h3>Orientação Eixo Secundario</h3>
                 <p>O eixo secundário, como mencionado anteriormente, é perpendicular ao eixo principal e define como os
                     elementos são alinhados ao longo da sua direção.
                     Para controlar o alinhamento dos itens ao longo do eixo secundário, além de definir o contêiner com
@@ -167,7 +166,7 @@
 
             <div>
 
-                <h2>Exemplo Align-Items</h2>
+                <h3>Exemplo Align-Items</h3>
                 <p>Para entender melhor o que foi explicado anteriormente, interaja com o exemplo abaixo. Clique no
                     botão com o tipo de orientação desejado e veja como ele se comporta</p>
                 <div class="exemplo">
@@ -176,13 +175,26 @@
                         <p>Elemento 2</p>
                         <p>Elemento 3</p>
                         <p>Elemento 4</p>
+                        <p>Elemento 5</p>
+                        <p>Elemento 6</p>
+                        <p>Elemento 7</p>
+                        <p>Elemento 8</p>
+                        <p>Elemento 9</p>
                     </container>
                     <div class="botoes_exemplo">
+                        <h4>Controlar Align-Items</h4>
                         <btn onclick="changeAlignItems('flex-start')">Flex-Start</btn>
                         <btn onclick="changeAlignItems('flex-end')">Flex-End</btn>
                         <btn onclick="changeAlignItems('center')">Center</btn>
                         <btn onclick="changeAlignItems('stretch')">Stretch</btn>
                         <btn onclick="changeAlignItems('baseline')">Baseline</btn>
+                    </div>
+                    <div class="botoes_exemplo">
+                        <h4>Controlar Flex-Direction</h4>
+                            <btn onclick="changeDirection('row', 'container_align-items')">Row</btn>
+                            <btn onclick="changeDirection('row-reverse', 'container_align-items')">Row-Reverse</btn>
+                            <btn onclick="changeDirection('column', 'container_align-items')">Column</btn>
+                            <btn onclick="changeDirection('column-reverse', 'container_align-items')">Column-Reverse</btn>                    
                     </div>
                 </div>
             </div>
@@ -214,7 +226,7 @@
             </div>
             <div>
 
-                <h2>Exemplo Wrap</h2>
+                <h3>Exemplo Wrap</h3>
                 <p>Para entender melhor o que foi explicado anteriormente, interaja com o exemplo abaixo. Clique no
                     botão com o tipo de orientação desejado e veja como ele se comporta</p>
                 <div class="exemplo">
@@ -223,18 +235,20 @@
                         <p>Elemento 2</p>
                         <p>Elemento 3</p>
                         <p>Elemento 4</p>
+                        <p>Elemento 5</p>
                     </container>
                     <div class="botoes_exemplo">
-                        <btn onclick="changeWrap('wrap')">Wrap</btn>
-                        <btn onclick="changeWrap('wrap-reverse')">Wrap-Reverse</btn>
-                        <btn onclick="changeWrap('nowrap')">Nowrap</btn>
+                        <h4>Controlar Wrap</h4>
+                        <btn onclick="changeWrap('wrap','container_wrap')">Wrap</btn>
+                        <btn onclick="changeWrap('wrap-reverse','container_wrap')">Wrap-Reverse</btn>
+                        <btn onclick="changeWrap('nowrap','container_wrap')">Nowrap</btn>
                     </div>
                 </div>
             </div>
         </section>
 
         <section class="orientar_wrap separador_secao" id="orientar_wrap">
-            <h2>Orientação Lihas</h2>
+            <h2>Disposição das Lihas</h2>
             <div class="orientacao_secundaria">
                 <p>
                     Para controlar o alinhamento das linhas ao longo do eixo secundário, além de definir o contêiner com
@@ -268,7 +282,7 @@
             </div>
             <div>
 
-                <h2>Exemplo Align-Content</h2>
+                <h3>Exemplo Align-Content</h3>
                 <p>Para entender melhor o que foi explicado anteriormente, interaja com o exemplo abaixo. Clique no
                     botão com o tipo de orientação desejado e veja como ele se comporta</p>
                 <div class="exemplo">
@@ -277,15 +291,27 @@
                         <p>Elemento 2</p>
                         <p>Elemento 3</p>
                         <p>Elemento 4</p>
+                        <p>Elemento 5</p>
+                        <p>Elemento 6</p>
+                        <p>Elemento 7</p>
+                        <p>Elemento 8</p>
+                        <p>Elemento 9</p>
                     </container>
                     <div class="botoes_exemplo">
+                        <h4>Controlar Align-Content</h4>
                         <btn onclick="changeAlignContent('flex-start')">Flex-Start</btn>
                         <btn onclick="changeAlignContent('flex-end')">Flex-End</btn>
                         <btn onclick="changeAlignContent('center')">Center</btn>
                         <btn onclick="changeAlignContent('stretch')">Stretch</btn>
-                        <btn onclick="changeAlignContent('space-between')">space-between</btn>
-                        <btn onclick="changeAlignContent('space-around')">space-around</btn>
-                        <btn onclick="changeAlignContent('space-evenly')">space-evenly</btn>
+                        <btn onclick="changeAlignContent('space-between')">Space-Between</btn>
+                        <btn onclick="changeAlignContent('space-around')">Space-Around</btn>
+                        <btn onclick="changeAlignContent('space-evenly')">Space-Evenly</btn>
+                    </div>
+                    <div class="botoes_exemplo teste">
+                        <h4>Controlar Wrap</h4>
+                        <btn onclick="changeWrap('wrap', 'container_align-content')">Wrap</btn>
+                        <btn onclick="changeWrap('wrap-reverse', 'container_align-content')">Wrap-Reverse</btn>
+                        <h3>A opção <code>nowrap</code> não esta disponivel, porque independente da opção selecionada não mudara o conteudo. Isso acontece pelo fato do nowrap não quebrar o conteudo em linhas.</h3>        
                     </div>
                 </div>
             </div>

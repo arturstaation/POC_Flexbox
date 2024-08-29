@@ -1,5 +1,5 @@
-function changeDirection(direction) {
-    const container = document.getElementById('container_orientação_principal');
+function changeDirection(direction, elemento) {
+    const container = document.getElementById(elemento);
     container.style.flexDirection = direction;
 }
 
@@ -13,7 +13,7 @@ function changeAlignContent(option) {
     container.style.alignContent = option;
 }
 
-function changeWrap(option) {
-    const container = document.getElementById('container_wrap');
+function changeWrap(option, elemento) {
+    const container = document.getElementById(elemento);
     container.style.flexWrap = option;
 }
