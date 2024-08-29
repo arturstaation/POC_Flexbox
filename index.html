@@ -121,6 +121,7 @@
                         <p>Elemento 2</p>
                         <p>Elemento 3</p>
                         <p>Elemento 4</p>
+                        <p>Elemento 5</p>
                     </container>
                     <div class="botoes_exemplo">
                         <h4>Controlar Flex-Direction</h4>
@@ -176,10 +177,6 @@
                         <p>Elemento 3</p>
                         <p>Elemento 4</p>
                         <p>Elemento 5</p>
-                        <p>Elemento 6</p>
-                        <p>Elemento 7</p>
-                        <p>Elemento 8</p>
-                        <p>Elemento 9</p>
                     </container>
                     <div class="botoes_exemplo">
                         <h4>Controlar Align-Items</h4>
@@ -292,10 +289,6 @@
                         <p>Elemento 3</p>
                         <p>Elemento 4</p>
                         <p>Elemento 5</p>
-                        <p>Elemento 6</p>
-                        <p>Elemento 7</p>
-                        <p>Elemento 8</p>
-                        <p>Elemento 9</p>
                     </container>
                     <div class="botoes_exemplo">
                         <h4>Controlar Align-Content</h4>
@@ -311,7 +304,7 @@
                         <h4>Controlar Wrap</h4>
                         <btn onclick="changeWrap('wrap', 'container_align-content')">Wrap</btn>
                         <btn onclick="changeWrap('wrap-reverse', 'container_align-content')">Wrap-Reverse</btn>
-                        <h3>A opção <code>nowrap</code> não esta disponivel, porque independente da opção selecionada não mudara o conteudo. Isso acontece pelo fato do nowrap não quebrar o conteudo em linhas.</h3>        
+                        <btn onclick="changeWrap('nowrap', 'container_align-content')">Nowrap</btn>
                     </div>
                 </div>
             </div>
@@ -319,38 +312,101 @@
 
         <section class="como_se_aplica separador_secao" id="como_se_aplica">
             <h2>Quando Utilizar</h2>
-            <p>No contexto do desenvolvimento web, o Flexbox se revela uma ferramenta indispensável para lidar com
-                uma
-                variedade de desafios de layout.
-                Em situações onde você precisa garantir que elementos dentro de um contêiner se alinhem corretamente
-                e
-                se ajustem conforme o tamanho da tela muda, o Flexbox oferece uma solução elegante e eficiente.</p>
-            <p>Essa flexibilidade se torna ainda mais crucial quando consideramos a diversidade de dispositivos
-                utilizados para acessar a internet atualmente. Com uma ampla gama de tamanhos de tela e resoluções –
-                que
-                vão desde smartphones e tablets até computadores de mesa e monitores de alta resolução – garantir
-                que o
-                layout do seu site seja responsivo e funcione bem em todos esses contextos é essencial para uma
-                experiência de usuário otimizada.
-                O Flexbox facilita a adaptação do design a diferentes tamanhos de tela e orientações, permitindo que
-                os
-                elementos se ajustem de maneira fluida e proporcional. Isso significa que, independentemente do
-                dispositivo que o visitante esteja utilizando, o conteúdo do site permanecerá acessível e
-                visualmente
-                agradável, reduzindo a necessidade de ajustes manuais e melhorando a usabilidade geral do site. Em
-                um
-                ambiente digital tão fragmentado, a capacidade do Flexbox de criar layouts adaptáveis e coesos é um
-                verdadeiro diferencial para garantir a compatibilidade e a satisfação do usuário.</p>
+            <p>No contexto do desenvolvimento web, o Flexbox se revela uma ferramenta indispensável para lidar com uma
+                variedade de desafios de layout. Em situações onde você precisa garantir que elementos dentro de um contêiner
+                se alinhem corretamente e se ajustem conforme o tamanho da tela muda, o Flexbox oferece uma solução elegante e eficiente.</p>
+            <p>Essa flexibilidade se torna ainda mais crucial quando consideramos a diversidade de dispositivos utilizados para acessar a internet atualmente. Com uma ampla gama de tamanhos de tela e resoluções – que vão desde smartphones e tablets até computadores de mesa e monitores de alta resolução – garantir que o layout do seu site seja responsivo e funcione bem em todos esses contextos é essencial para uma experiência de usuário otimizada. O Flexbox facilita a adaptação do design a diferentes tamanhos de tela e orientações, permitindo que os elementos se ajustem de maneira fluida e proporcional. Isso significa que, independentemente do dispositivo que o visitante esteja utilizando, o conteúdo do site permanecerá acessível e visualmente agradável, reduzindo a necessidade de ajustes manuais e melhorando a usabilidade geral do site. Em um ambiente digital tão fragmentado, a capacidade do Flexbox de criar layouts adaptáveis e coesos é um verdadeiro diferencial para garantir a compatibilidade e a satisfação do usuário.</p>
+            
             <div class="aplicacao_flex-direction">
                 <h2>Exemplo De Flex-Direction</h2>
-
+                <p><strong>Antes:</strong> Um layout de cartões projetado com <code>flex-direction: row;</code> pode funcionar bem em uma tela de computador, exibindo todos os cartões lado a lado. No entanto, quando acessado em um celular, o layout pode ultrapassar o limite da tela, forçando o usuário a rolar horizontalmente, o que compromete a usabilidade.</p>
+                <div class="container_exemplo">
+                    <div class="container antes flex-direction">
+                        <div class="item">Cartão 1</div>
+                        <div class="item">Cartão 2</div>
+                        <div class="item">Cartão 3</div>
+                        <div class="item">Cartão 4</div>
+                    </div>
+                </div>
+                <p><strong>Depois:</strong> Aplicando <code>flex-direction: column;</code> em telas menores, os cartões são empilhados verticalmente, o que melhora a leitura e a navegação em dispositivos móveis. Isso permite que o layout seja adaptável, sem comprometer a experiência do usuário em telas maiores.</p>
+                <div class="container_exemplo">
+                    <div class="container depois flex-direction">
+                        <div class="item">Cartão 1</div>
+                        <div class="item">Cartão 2</div>
+                        <div class="item">Cartão 3</div>
+                        <div class="item">Cartão 4</div>
+                    </div>
+                </div>
             </div>
-            <div class="aplicacao_allign-content">
-                <h2>Aplicação De Allign-Content</h2>
+        
+            <div class="aplicacao_flex-wrap">
+                <h2>Exemplo De Flex-Wrap</h2>
+                <p><strong>Antes:</strong> Com <code>flex-wrap: nowrap;</code>, uma galeria de imagens pode se estender horizontalmente sem limites, criando uma barra de rolagem horizontal em dispositivos móveis. Esse problema ocorre porque todos os itens são forçados a permanecer em uma única linha, causando rolagem desnecessária e uma visualização desajustada.</p>
+                <div class="container_exemplo">
+                    <div class="container antes flex-wrap">
+                        <div class="item">Imagem 1</div>
+                        <div class="item">Imagem 2</div>
+                        <div class="item">Imagem 3</div>
+                        <div class="item">Imagem 4</div>
+                        <div class="item">Imagem 5</div>
+                        <div class="item">Imagem 6</div>
+                    </div>
+                </div>
+                <p><strong>Depois:</strong> Aplicando <code>flex-wrap: wrap;</code>, as imagens são automaticamente movidas para a linha seguinte quando não há espaço suficiente, permitindo uma visualização adequada sem rolagem horizontal em dispositivos móveis e mantendo o layout organizado.</p>
+                <div class="container_exemplo">
+                    <div class="container depois flex-wrap">
+                        <div class="item">Imagem 1</div>
+                        <div class="item">Imagem 2</div>
+                        <div class="item">Imagem 3</div>
+                        <div class="item">Imagem 4</div>
+                        <div class="item">Imagem 5</div>
+                        <div class="item">Imagem 6</div>
+                    </div>
+                </div>
             </div>
-            <div class="aplicacao_wrap">
-                <h2>Aplicação de Wrap</h2>
+        
+            <div class="aplicacao_align-items">
+                <h2>Aplicação De Align-Items</h2>
+                <p><strong>Antes:</strong> Sem uma configuração específica para <code>align-items</code>, o alinhamento vertical dos itens pode ser inconsistente, especialmente se os itens tiverem alturas diferentes. Isso pode resultar em um layout onde os itens parecem desalinhados, o que compromete a estética e a organização visual.</p>
+                <div class="container_exemplo">
+                    <div class="container antes align-items">
+                        <div class="item">Item A</div>
+                        <div class="item">Item B</div>
+                        <div class="item">Item C</div>
+                    </div>
+                </div>
+                <p><strong>Depois:</strong> Aplicando <code>align-items: center;</code>, todos os itens são alinhados verticalmente ao centro do contêiner, garantindo um layout mais organizado e esteticamente agradável, independentemente das diferenças de altura entre os itens.</p>
+                <div class="container_exemplo">
+                    <div class="container depois align-items">
+                        <div class="item">Item A</div>
+                        <div class="item">Item B</div>
+                        <div class="item">Item C</div>
+                    </div>
+                </div>
             </div>
+        
+            <div class="aplicacao_align-content">
+                <h2>Aplicação De Align-Content</h2>
+                <p><strong>Antes:</strong> Sem uma configuração para <code>align-content</code>, quando há poucos itens em um contêiner grande, o espaço em branco ao redor pode ser excessivo e desbalanceado. Isso faz com que o layout pareça irregular, especialmente se o contêiner for muito maior do que o necessário para os itens.</p>
+                <div class="container_exemplo">
+                    <div class="container antes align-content">
+                        <div class="item">Post 1</div>
+                        <div class="item">Post 2</div>
+                        <div class="item">Post 3</div>
+                    </div>
+                </div>
+                <p><strong>Depois:</strong> Aplicando <code>align-content: center;</code>, o conteúdo é distribuído de maneira mais uniforme dentro do contêiner, preenchendo o espaço de forma mais equilibrada e melhorando a estética geral, especialmente em contêineres grandes com poucos itens.</p>
+                <div class="container_exemplo">
+                    <div class="container depois align-content">
+                        <div class="item">Post 1</div>
+                        <div class="item">Post 2</div>
+                        <div class="item">Post 3</div>
+                    </div>
+                </div>
+            </div>
+        
+            <h2>Conclusão</h2>
+            <p>O Flexbox é uma ferramenta poderosa para criar layouts responsivos e adaptáveis no desenvolvimento web. Ele resolve problemas comuns de layout, como a distribuição e alinhamento de itens, que podem ser desafiadores com métodos de layout mais tradicionais. A aplicação de <code>flex-direction</code>, <code>align-content</code>, <code>align-items</code>, e <code>flex-wrap</code> proporciona uma flexibilidade significativa para ajustar o design do seu site em diferentes dispositivos e tamanhos de tela. Com esses ajustes, você pode garantir que seu layout seja visualmente coeso, funcional e otimizado para a melhor experiência do usuário.</p>
         </section>
         <section class="referencias" id="referencias">
             <h1>Referencias</h1>
