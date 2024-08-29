@@ -128,7 +128,7 @@ dd {
 .container_exemplo p,
 .container_wrap p,
 .container_align-items p,
-.container_align-content p {
+.container_align-content p{
     background: #e9ecef;
     padding: 10px;
     border-radius: 5px;
@@ -159,6 +159,39 @@ dd {
 
 .botoes_exemplo btn:hover {
     background-color: #0056b3;
+}
+/* Seção de Pratica */
+.container_prova{
+    display: flex;
+    flex-direction: row;
+    
+}
+.itens_prova{
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+    align-items: center;
+    flex-wrap: nowrap;
+    
+}
+
+.corrigir_fd{
+    flex-direction: column;
+}
+
+.corrigir_wrap{
+    flex-wrap: wrap;
+}
+
+.itens_prova p{
+    margin: 5px;
+}
+
+.celular{
+    width: 300px;
+}
+.container_prova_celular{
+    margin-left: 100px;
 }
 
 /* Seção de Referências */

@@ -89,6 +89,7 @@
         <section class="orientar_flexbox separador_secao" id="orientar_flexbox">
             <h2>Disposição dos Elementos Na FlexBox</h2>
             <div class="orientacao_principal">
+                    <h3>Orientação Eixo Principal</h3>
                     <p>O eixo principal, como dito anteriormente, define a direção na qual os elementos serão inseridos.
                         Para definir essa direção deve-se adicionar, além da propriedade para atribuir ao componente o
                         display flexivel, a propriedade <code>flex-direction</code> .
@@ -318,23 +319,48 @@
             <p>Essa flexibilidade se torna ainda mais crucial quando consideramos a diversidade de dispositivos utilizados para acessar a internet atualmente. Com uma ampla gama de tamanhos de tela e resoluções – que vão desde smartphones e tablets até computadores de mesa e monitores de alta resolução – garantir que o layout do seu site seja responsivo e funcione bem em todos esses contextos é essencial para uma experiência de usuário otimizada. O Flexbox facilita a adaptação do design a diferentes tamanhos de tela e orientações, permitindo que os elementos se ajustem de maneira fluida e proporcional. Isso significa que, independentemente do dispositivo que o visitante esteja utilizando, o conteúdo do site permanecerá acessível e visualmente agradável, reduzindo a necessidade de ajustes manuais e melhorando a usabilidade geral do site. Em um ambiente digital tão fragmentado, a capacidade do Flexbox de criar layouts adaptáveis e coesos é um verdadeiro diferencial para garantir a compatibilidade e a satisfação do usuário.</p>
             
             <div class="aplicacao_flex-direction">
+
                 <h2>Exemplo De Flex-Direction</h2>
                 <p><strong>Antes:</strong> Um layout de cartões projetado com <code>flex-direction: row;</code> pode funcionar bem em uma tela de computador, exibindo todos os cartões lado a lado. No entanto, quando acessado em um celular, o layout pode ultrapassar o limite da tela, forçando o usuário a rolar horizontalmente, o que compromete a usabilidade.</p>
-                <div class="container_exemplo">
-                    <div class="container antes flex-direction">
-                        <div class="item">Cartão 1</div>
-                        <div class="item">Cartão 2</div>
-                        <div class="item">Cartão 3</div>
-                        <div class="item">Cartão 4</div>
+                <div class = "container_prova">
+                    <div>
+                        <h4>Computador</h4>
+                        <div class="itens_prova container_exemplo">
+                            <p>Cartao 1</p>
+                            <p>Cartao 2</p>
+                            <p>Cartao 3</p>
+                            <p>Cartao 4</p>
+                        </div>
+                    </div>
+                    <div class = "container_prova_celular">
+                        <h4>Celular</h4>
+                        <div class="itens_prova celular container_exemplo">
+                            <p>Cartao 1</p>
+                            <p>Cartao 2</p>
+                            <p>Cartao 3</p>
+                            <p>Cartao 4</p>
+                        </div>
                     </div>
                 </div>
                 <p><strong>Depois:</strong> Aplicando <code>flex-direction: column;</code> em telas menores, os cartões são empilhados verticalmente, o que melhora a leitura e a navegação em dispositivos móveis. Isso permite que o layout seja adaptável, sem comprometer a experiência do usuário em telas maiores.</p>
-                <div class="container_exemplo">
-                    <div class="container depois flex-direction">
-                        <div class="item">Cartão 1</div>
-                        <div class="item">Cartão 2</div>
-                        <div class="item">Cartão 3</div>
-                        <div class="item">Cartão 4</div>
+                <div class = "container_prova">
+                    <div>
+                        <h4>Computador</h4>
+                        <div class="itens_prova container_exemplo">
+                            <p>Cartao 1</p>
+                            <p>Cartao 2</p>
+                            <p>Cartao 3</p>
+                            <p>Cartao 4</p>
+                        </div>
+                    </div>
+                    <div class = "container_prova_celular">
+                        <h4>Celular</h4>
+                        <div class="itens_prova corrigir_fd celular container_exemplo">
+                            <p>Cartao 1</p>
+                            <p>Cartao 2</p>
+                            <p>Cartao 3</p>
+                            <p>Cartao 4</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -342,25 +368,49 @@
             <div class="aplicacao_flex-wrap">
                 <h2>Exemplo De Flex-Wrap</h2>
                 <p><strong>Antes:</strong> Com <code>flex-wrap: nowrap;</code>, uma galeria de imagens pode se estender horizontalmente sem limites, criando uma barra de rolagem horizontal em dispositivos móveis. Esse problema ocorre porque todos os itens são forçados a permanecer em uma única linha, causando rolagem desnecessária e uma visualização desajustada.</p>
-                <div class="container_exemplo">
-                    <div class="container antes flex-wrap">
-                        <div class="item">Imagem 1</div>
-                        <div class="item">Imagem 2</div>
-                        <div class="item">Imagem 3</div>
-                        <div class="item">Imagem 4</div>
-                        <div class="item">Imagem 5</div>
-                        <div class="item">Imagem 6</div>
+                <div class = "container_prova">
+                    <div>
+                        <h4>Computador</h4>
+                        <div class="itens_prova container_exemplo">
+                            <p>Imagem 1</p>
+                            <p>Imagem 2</p>
+                            <p>Imagem 3</p>
+                            <p>Imagem 4</p>
+                            <p>Imagem 5</p>
+                        </div>
+                    </div>
+                    <div class = "container_prova_celular">
+                        <h4>Celular</h4>
+                        <div class="itens_prova celular container_exemplo">
+                            <p>Imagem 1</p>
+                            <p>Imagem 2</p>
+                            <p>Imagem 3</p>
+                            <p>Imagem 4</p>
+                            <p>Imagem 5</p>
+                        </div>
                     </div>
                 </div>
                 <p><strong>Depois:</strong> Aplicando <code>flex-wrap: wrap;</code>, as imagens são automaticamente movidas para a linha seguinte quando não há espaço suficiente, permitindo uma visualização adequada sem rolagem horizontal em dispositivos móveis e mantendo o layout organizado.</p>
-                <div class="container_exemplo">
-                    <div class="container depois flex-wrap">
-                        <div class="item">Imagem 1</div>
-                        <div class="item">Imagem 2</div>
-                        <div class="item">Imagem 3</div>
-                        <div class="item">Imagem 4</div>
-                        <div class="item">Imagem 5</div>
-                        <div class="item">Imagem 6</div>
+                <div class = "container_prova">
+                    <div>
+                        <h4>Computador</h4>
+                        <div class="itens_prova container_exemplo">
+                            <p>Imagem 1</p>
+                            <p>Imagem 2</p>
+                            <p>Imagem 3</p>
+                            <p>Imagem 4</p>
+                            <p>Imagem 5</p>
+                        </div>
+                    </div>
+                    <div class = "container_prova_celular">
+                        <h4>Celular</h4>
+                        <div class="itens_prova corrigir_wrap celular container_exemplo">
+                            <p>Imagem 1</p>
+                            <p>Imagem 2</p>
+                            <p>Imagem 3</p>
+                            <p>Imagem 4</p>
+                            <p>Imagem 5</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -369,7 +419,7 @@
                 <h2>Aplicação De Align-Items</h2>
                 <p><strong>Antes:</strong> Sem uma configuração específica para <code>align-items</code>, o alinhamento vertical dos itens pode ser inconsistente, especialmente se os itens tiverem alturas diferentes. Isso pode resultar em um layout onde os itens parecem desalinhados, o que compromete a estética e a organização visual.</p>
                 <div class="container_exemplo">
-                    <div class="container antes align-items">
+                    <div class="container antes ">
                         <div class="item">Item A</div>
                         <div class="item">Item B</div>
                         <div class="item">Item C</div>
@@ -377,7 +427,7 @@
                 </div>
                 <p><strong>Depois:</strong> Aplicando <code>align-items: center;</code>, todos os itens são alinhados verticalmente ao centro do contêiner, garantindo um layout mais organizado e esteticamente agradável, independentemente das diferenças de altura entre os itens.</p>
                 <div class="container_exemplo">
-                    <div class="container depois align-items">
+                    <div class="container depois ">
                         <div class="item">Item A</div>
                         <div class="item">Item B</div>
                         <div class="item">Item C</div>
@@ -389,7 +439,7 @@
                 <h2>Aplicação De Align-Content</h2>
                 <p><strong>Antes:</strong> Sem uma configuração para <code>align-content</code>, quando há poucos itens em um contêiner grande, o espaço em branco ao redor pode ser excessivo e desbalanceado. Isso faz com que o layout pareça irregular, especialmente se o contêiner for muito maior do que o necessário para os itens.</p>
                 <div class="container_exemplo">
-                    <div class="container antes align-content">
+                    <div class="container antes ">
                         <div class="item">Post 1</div>
                         <div class="item">Post 2</div>
                         <div class="item">Post 3</div>
@@ -397,7 +447,7 @@
                 </div>
                 <p><strong>Depois:</strong> Aplicando <code>align-content: center;</code>, o conteúdo é distribuído de maneira mais uniforme dentro do contêiner, preenchendo o espaço de forma mais equilibrada e melhorando a estética geral, especialmente em contêineres grandes com poucos itens.</p>
                 <div class="container_exemplo">
-                    <div class="container depois align-content">
+                    <div class="container depois ">
                         <div class="item">Post 1</div>
                         <div class="item">Post 2</div>
                         <div class="item">Post 3</div>
