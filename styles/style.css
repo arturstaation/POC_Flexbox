@@ -8,7 +8,8 @@
 
 /* Corpo e Layout */
 body {
-    margin-left: 250px; /* Espaço para o cabeçalho fixo */
+    margin-left: 250px;
+    /* Espaço para o cabeçalho fixo */
     background-color: #f4f4f4;
     color: #333;
 }
@@ -22,9 +23,12 @@ header {
     top: 0;
     left: 0;
     height: 100%;
-    width: 250px; /* Largura do cabeçalho fixo */
-    z-index: 1000; /* Garantir que o cabeçalho esteja acima de outros elementos */
-    overflow-y: auto; /* Permite rolar se o conteúdo for maior que a tela */
+    width: 250px;
+    /* Largura do cabeçalho fixo */
+    z-index: 1000;
+    /* Garantir que o cabeçalho esteja acima de outros elementos */
+    overflow-y: auto;
+    /* Permite rolar se o conteúdo for maior que a tela */
 }
 
 header nav ul {
@@ -107,7 +111,8 @@ dd {
 /* Containers de Exemplo e Botões */
 .exemplo {
     display: flex;
-    gap: 20px; /* Espaço entre as colunas */
+    gap: 20px;
+    /* Espaço entre as colunas */
     margin-bottom: 20px;
 }
 
@@ -125,10 +130,17 @@ dd {
     background: #fff;
 }
 
+.container_exemplo2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
 .container_exemplo p,
 .container_wrap p,
 .container_align-items p,
-.container_align-content p{
+.container_align-content p,
+.container_exemplo2 p{
     background: #e9ecef;
     padding: 10px;
     border-radius: 5px;
@@ -139,7 +151,8 @@ dd {
 .botoes_exemplo {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Alinha os botões à esquerda */
+    align-items: flex-start;
+    /* Alinha os botões à esquerda */
 }
 
 .botoes_exemplo h4 {
@@ -160,37 +173,64 @@ dd {
 .botoes_exemplo btn:hover {
     background-color: #0056b3;
 }
+
 /* Seção de Pratica */
-.container_prova{
+.container_prova {
     display: flex;
     flex-direction: row;
-    
+
 }
-.itens_prova{
+
+.itens_prova {
     display: flex;
     flex-direction: row;
     width: 500px;
     align-items: center;
     flex-wrap: nowrap;
-    
+
 }
 
-.corrigir_fd{
+.itens_prova2 {
+    display: flex;
+    width: 500px;
+    align-content: center;
+    flex-wrap: wrap;
+
+}
+
+.itens_prova3 {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+
+}
+
+.corrigir_ai{
+    align-items: center;
+}
+.corrigir_ac{
+    align-content: center;
+}
+
+.corrigir_fd {
     flex-direction: column;
 }
 
-.corrigir_wrap{
+.corrigir_wrap {
     flex-wrap: wrap;
 }
 
-.itens_prova p{
+.itens_prova p {
     margin: 5px;
 }
 
-.celular{
+.celular {
     width: 300px;
 }
-.container_prova_celular{
+
+.container_prova_celular {
     margin-left: 100px;
 }
 
@@ -217,6 +257,45 @@ dd {
     text-decoration: none;
 }
 
+
 .lista_referencias a:hover {
     text-decoration: underline;
 }
+
+/* Imagem */
+
+.imagem_fb{
+    width: 700px;
+    height: auto;
+    
+}
+
+.item {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 5px;
+    flex: 1 1 100px; /* Flex item que se ajusta, com uma largura mínima */
+    text-align: center;
+}
+
+/* Estilo para o estado "Antes" */
+.antes {
+    display: flex;
+    align-content: flex-start; /* Espaço excessivo no fundo do contêiner */
+}
+
+/* Estilo para o estado "Depois" */
+.depois {
+    align-content: center; /* Espaço é distribuído de forma mais equilibrada */
+}
+.row{
+    flex-direction: row;
+}
+
+.teste{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
