@@ -1,5 +1,34 @@
 # Flexbox
 
+## Como Executar o Código
+
+Para acessar o site proposto por esta prova de conceito (POC), você tem duas opções:
+
+### Opção 1: Acesso Online
+
+Você pode visualizar o projeto diretamente no navegador acessando o seguinte link:
+[**https://arturstaation.github.io/POC_Flexbox/**](https://arturstaation.github.io/POC_Flexbox/)
+
+### Opção 2: Acesso Local
+
+Se preferir trabalhar com uma cópia local do projeto, siga os passos abaixo:
+
+1. **Baixar o Projeto**
+   - Acesse o repositório do projeto e clique em **"Código"**.
+   - Selecione a opção **"Baixar ZIP"** para obter o arquivo compactado do projeto.
+
+2. **Descompactar o Arquivo**
+   - Após o download, localize o arquivo ZIP em seu computador.
+   - Descompacte o arquivo para uma pasta de sua escolha.
+
+3. **Abrir o Arquivo HTML**
+   - Navegue até a pasta descompactada.
+   - Abra o arquivo `index.html` em um navegador web de sua preferência (como Google Chrome, Mozilla Firefox, etc.).
+
+Com esses passos, você poderá visualizar e interagir com a prova de conceito localmente em seu computador.
+
+Se precisar de ajuda adicional ou encontrar algum problema, sinta-se à vontade para entrar em contato!
+
 ## Introdução
 
 Durante muito tempo, as únicas tecnicas disponíveis para a criação de layouts usando CSS e posicionamento de elementos, e com boa compatibilidade entre browsers, eram float e position. Além disso, manipulações entre elementos pai-filho era uma outra tarefa complexa. Visto isso, essa ferramente foi criada para simplificar, sem perder a funcionalidade, essas tarefas,além de aumentar a eficiencia.
