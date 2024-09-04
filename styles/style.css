@@ -202,8 +202,31 @@ dd {
     display: flex;
     flex-direction: column;
     width: 500px;
+    height: 300px;
     align-items: flex-start;
     flex-wrap: nowrap;
+
+}
+
+.itens_prova4 {
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+    align-items: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    height: 300px;
+
+}
+
+.itens_prova5 {
+    display: flex;
+    flex-direction: row;
+    width: 700px;
+    align-items: center;
+    align-content: flex-start;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
 
 }
 
@@ -213,7 +236,9 @@ dd {
 .corrigir_ac{
     align-content: center;
 }
-
+.corrigir_jc{
+    justify-content: space-evenly;
+}
 .corrigir_fd {
     flex-direction: column;
 }

@@ -16,6 +16,7 @@
                 <li><a href="#principais_conceitos">Principais Conceitos</a></li>
                 <li><a href="#usar_flexbox">Como Usar</a></li>
                 <li><a href="#orientar_flexbox">Disposição</a></li>
+                <li><a href="#secao_justify_content">Distribuir Espaço</a></li>
                 <li><a href="#secao_wrap">Wrap</a></li>
                 <li><a href="#orientar_wrap">Disposição das Linhas</a></li>
                 <li><a href="#como_se_aplica">Quando Utilizar</a></li>
@@ -201,6 +202,61 @@
 
 
         </section>
+
+        <section class="justify_content separador_secao" id="secao_justify_content">
+            <h2>Justify Content</h2>
+            <div class="texto_wrap">
+                <p>A propriedade <code>justify-content</code> no Flexbox controla o alinhamento dos itens ao longo do eixo principal do contêiner. 
+                    Esta propriedade é usada para distribuir o espaço restante ao longo do eixo principal e alinha os itens dentro do contêiner flexível. 
+                    É particularmente útil para centralizar, alinhar ou distribuir itens de forma equitativa.
+                    Para definir essa direção deve-se adicionar, além da propriedade para atribuir ao componente o
+                    display flexivel, a propriedade <code>justify-content</code>. No entanto, ela por si so não muda nada. Para que ela tenha funcionamento adequado deve-se
+                    atribuir um parametro a ela. Esses parametros podem ser:</p>
+                
+
+                    <dl>
+                        <dt><strong>flex-start</strong></dt>
+                        <dd>É o valor padrão. Os itens são alinhados no início do eixo principal, deixando qualquer espaço restante no final do contêiner.</dd>
+    
+                        <dt><strong>center</strong></dt>
+                        <dd>Os itens são centralizados ao longo do eixo principal, deixando o espaço restante igualmente distribuído antes e depois dos itens.</dd>
+    
+                        <dt><strong>flex-end</strong></dt>
+                        <dd>Os itens são alinhados no final do eixo principal, deixando qualquer espaço restante no início do contêiner.</dd>
+    
+                        <dt><strong>space-between</strong></dt>
+                        <dd>Os itens são distribuídos uniformemente ao longo do eixo principal, com o primeiro item alinhado no início e o último item no final do contêiner. O espaço restante é distribuído igualmente entre os itens.</dd>
+    
+                        <dt><strong>space-around</strong></dt>
+                        <dd>Os itens são distribuídos uniformemente ao longo do eixo principal, com o mesmo espaço antes do primeiro item e após o último item. O espaço restante é distribuído igualmente entre os itens, mas com uma margem igual ao redor de cada item.</dd>
+                    
+                        <dt><strong>space-evenly</strong></dt>
+                        <dd>Os itens são distribuídos uniformemente ao longo do eixo principal, com o mesmo espaço entre todos os itens, incluindo antes do primeiro e depois do último item.</dd>
+    
+                    </dl>
+            </div>
+            <div>
+                <h3>Exemplo Justify Content</h3>
+                <p>Para entender melhor o que foi explicado anteriormente, interaja com o exemplo abaixo. Clique no botão com o tipo de alinhamento desejado e veja como ele se comporta</p>
+                <div class="exemplo">
+                    <div class="container_exemplo contornar" id="container_justify">
+                        <p>Elemento 1</p>
+                        <p>Elemento 2</p>
+                        <p>Elemento 3</p>
+                    </div>
+                    <div class="botoes_exemplo">
+                        <h4>Controlar Justify Content</h4>
+                        <btn onclick="changeJustifyContent('flex-start','container_justify')">Flex-Start</btn>
+                        <btn onclick="changeJustifyContent('center','container_justify')">Center</btn>
+                        <btn onclick="changeJustifyContent('flex-end','container_justify')">Flex-End</btn>
+                        <btn onclick="changeJustifyContent('space-between','container_justify')">Space-Between</btn>
+                        <btn onclick="changeJustifyContent('space-around','container_justify')">Space-Around</btn>
+                        <btn onclick="changeJustifyContent('space-evenly','container_justify')">Space-Evenly</btn>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
         <section class="secao_wrap separador_secao" id="secao_wrap">
             <h2>Wrap</h2>
             <div class="texto_wrap">
@@ -303,7 +359,7 @@
                         <btn onclick="changeAlignContent('space-around')">Space-Around</btn>
                         <btn onclick="changeAlignContent('space-evenly')">Space-Evenly</btn>
                     </div>
-                    <div class="botoes_exemplo teste">
+                    <div class="botoes_exemplo">
                         <h4>Controlar Wrap</h4>
                         <btn onclick="changeWrap('wrap', 'container_align-content')">Wrap</btn>
                         <btn onclick="changeWrap('wrap-reverse', 'container_align-content')">Wrap-Reverse</btn>
@@ -384,70 +440,160 @@
                 </div>
             </div>
 
-            <div class="aplicacao_flex-wrap">
-                <h2>Exemplo De Flex-Wrap</h2>
-                <p><strong>Antes:</strong> Com <code>flex-wrap: nowrap;</code>, uma galeria de imagens pode se estender
-                    horizontalmente sem limites, criando uma barra de rolagem horizontal em dispositivos móveis. Esse
-                    problema ocorre porque todos os itens são forçados a permanecer em uma única linha, causando rolagem
-                    desnecessária e uma visualização desajustada.</p>
-                <div class="container_prova">
-                    <div>
-                        <h4>Computador</h4>
-                        <div class="itens_prova container_exemplo">
-                            <p>Imagem 1</p>
-                            <p>Imagem 2</p>
-                            <p>Imagem 3</p>
-                            <p>Imagem 4</p>
-                            <p>Imagem 5</p>
+                <div class="aplicacao_flex-wrap">
+                    <h2>Exemplo De Flex-Wrap</h2>
+                    <p><strong>Antes:</strong> Com <code>flex-wrap: nowrap;</code>, uma galeria de imagens pode se estender
+                        horizontalmente sem limites, criando uma barra de rolagem horizontal em dispositivos móveis. Esse
+                        problema ocorre porque todos os itens são forçados a permanecer em uma única linha, causando rolagem
+                        desnecessária e uma visualização desajustada.</p>
+                    <div class="container_prova">
+                        <div>
+                            <h4>Computador</h4>
+                            <div class="itens_prova container_exemplo">
+                                <p>Imagem 1</p>
+                                <p>Imagem 2</p>
+                                <p>Imagem 3</p>
+                                <p>Imagem 4</p>
+                                <p>Imagem 5</p>
+                            </div>
+                        </div>
+                        <div class="container_prova_celular">
+                            <h4>Celular</h4>
+                            <div class="itens_prova celular container_exemplo">
+                                <p>Imagem 1</p>
+                                <p>Imagem 2</p>
+                                <p>Imagem 3</p>
+                                <p>Imagem 4</p>
+                                <p>Imagem 5</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="container_prova_celular">
-                        <h4>Celular</h4>
-                        <div class="itens_prova celular container_exemplo">
-                            <p>Imagem 1</p>
-                            <p>Imagem 2</p>
-                            <p>Imagem 3</p>
-                            <p>Imagem 4</p>
-                            <p>Imagem 5</p>
+                    <p><strong>Depois:</strong> Aplicando <code>flex-wrap: wrap;</code>, as imagens são automaticamente
+                        movidas para a linha seguinte quando não há espaço suficiente, permitindo uma visualização adequada
+                        sem rolagem horizontal em dispositivos móveis e mantendo o layout organizado.</p>
+                    <div class="container_prova">
+                        <div>
+                            <h4>Computador</h4>
+                            <div class="itens_prova container_exemplo">
+                                <p>Imagem 1</p>
+                                <p>Imagem 2</p>
+                                <p>Imagem 3</p>
+                                <p>Imagem 4</p>
+                                <p>Imagem 5</p>
+                            </div>
+                        </div>
+                        <div class="container_prova_celular">
+                            <h4>Celular</h4>
+                            <div class="itens_prova corrigir_wrap celular container_exemplo">
+                                <p>Imagem 1</p>
+                                <p>Imagem 2</p>
+                                <p>Imagem 3</p>
+                                <p>Imagem 4</p>
+                                <p>Imagem 5</p>
+                            </div>
                         </div>
                     </div>
+            </div>
+
+            <div class = "aplicacao_align-items">
+                <h2>Exemplo De Align-Items</h2>
+        <p><strong>Antes:</strong> Com <code>align-items: flex-start;</code>, os itens dentro do contêiner são alinhados no início do eixo transversal. Isso pode resultar em um alinhamento desordenado, especialmente quando os itens têm diferentes alturas.</p>
+        <div class="container_prova">
+            <div>
+                <div class="itens_prova3 container_exemplo">
+                    <p>Item 1</p>
+                    <p>Item 2</p>
+                    <p>Item 3</p>
                 </div>
-                <p><strong>Depois:</strong> Aplicando <code>flex-wrap: wrap;</code>, as imagens são automaticamente
-                    movidas para a linha seguinte quando não há espaço suficiente, permitindo uma visualização adequada
-                    sem rolagem horizontal em dispositivos móveis e mantendo o layout organizado.</p>
-                <div class="container_prova">
-                    <div>
-                        <h4>Computador</h4>
-                        <div class="itens_prova container_exemplo">
-                            <p>Imagem 1</p>
-                            <p>Imagem 2</p>
-                            <p>Imagem 3</p>
-                            <p>Imagem 4</p>
-                            <p>Imagem 5</p>
-                        </div>
-                    </div>
-                    <div class="container_prova_celular">
-                        <h4>Celular</h4>
-                        <div class="itens_prova corrigir_wrap celular container_exemplo">
-                            <p>Imagem 1</p>
-                            <p>Imagem 2</p>
-                            <p>Imagem 3</p>
-                            <p>Imagem 4</p>
-                            <p>Imagem 5</p>
-                        </div>
-                    </div>
+            </div>
+        </div>
+        <p><strong>Depois:</strong> Aplicando <code>align-items: center;</code>, os itens são centralizados ao longo do eixo transversal, proporcionando um alinhamento mais equilibrado, independentemente das suas alturas.</p>
+        <div class="container_prova">
+            <div>
+                <div class="itens_prova3 corrigir_ai container_exemplo">
+                    <p>Item 1</p>
+                    <p>Item 2</p>
+                    <p>Item 3</p>
                 </div>
             </div>
 
-            <h2>Conclusão</h2>
-            <p>O Flexbox é uma ferramenta poderosa para criar layouts responsivos e adaptáveis no desenvolvimento web.
-                Ele resolve problemas comuns de layout, como a distribuição e alinhamento de itens, que podem ser
-                desafiadores com métodos de layout mais tradicionais. A aplicação de <code>flex-direction</code>,
-                <code>align-content</code>, <code>align-items</code>, e <code>flex-wrap</code> proporciona uma
-                flexibilidade significativa para ajustar o design do seu site em diferentes dispositivos e tamanhos de
-                tela. Com esses ajustes, você pode garantir que seu layout seja visualmente coeso, funcional e otimizado
-                para a melhor experiência do usuário.
-            </p>
+    
+
+        </div>
+        <div class = "aplicacao_align-content">
+            <h2>Exemplo De Align-Content</h2>
+            <p><strong>Antes:</strong> Com <code>align-content: flex-start;</code>, as linhas de itens são alinhadas no início do eixo transversal, deixando o espaço restante no final do contêiner. Isso pode resultar em um layout desalinhado se houver muito espaço no final do contêiner.</p>
+            <div class="container_prova">
+                <div>
+                    <div class="itens_prova4 container_exemplo">
+                        <p>Item 1</p>
+                        <p>Item 2</p>
+                        <p>Item 3</p>
+                        <p>Item 4</p>
+                        <p>Item 5</p>
+                        <p>Item 6</p>
+                        <p>Item 7</p>
+                        <p>Item 8</p>
+                    </div>
+                </div>
+            </div>
+            <p><strong>Depois:</strong> Aplicando <code>align-content: center;</code>, as linhas de itens são centralizadas ao longo do eixo transversal, preenchendo o espaço restante de forma mais equilibrada dentro do contêiner.</p>
+            <div class="container_prova">
+                <div>
+                    
+                    <div class="itens_prova4 corrigir_ac container_exemplo">
+                        <p>Item 1</p>
+                        <p>Item 2</p>
+                        <p>Item 3</p>
+                        <p>Item 4</p>
+                        <p>Item 5</p>
+                        <p>Item 6</p>
+                        <p>Item 7</p>
+                        <p>Item 8</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class = "aplicacao_justify-content">
+            <h2>Exemplo De Justify-Content: Space-Evenly</h2>
+        <p><strong>Antes:</strong> Com <code>justify-content: flex-start;</code>, os itens são alinhados no início do eixo principal, deixando qualquer espaço restante no final do contêiner. Isso pode resultar em um layout desbalanceado se houver muito espaço disponível no final.</p>
+        <div class="container_prova">
+            <div>
+                <div class="itens_prova5 container_exemplo">
+                    <p>Item 1</p>
+                    <p>Item 2</p>
+                    <p>Item 3</p>
+                    <p>Item 4</p>
+                    <p>Item 5</p>
+                </div>
+            </div>
+        </div>
+        <p><strong>Depois:</strong> Aplicando <code>justify-content: space-evenly;</code>, os itens são distribuídos igualmente ao longo do eixo principal, com o mesmo espaço entre cada item e entre os itens e as bordas do contêiner.</p>
+        <div class="container_prova">
+            <div>
+                <div class="itens_prova5 corrigir_jc container_exemplo">
+                    <p>Item 1</p>
+                    <p>Item 2</p>
+                    <p>Item 3</p>
+                    <p>Item 4</p>
+                    <p>Item 5</p>
+                </div>
+            </div>
+        </div>
+
+        </div>
+        
+        <h2>Conclusão</h2>
+        <p>O Flexbox é uma ferramenta poderosa para criar layouts responsivos e adaptáveis no desenvolvimento web.
+            Ele resolve problemas comuns de layout, como a distribuição e alinhamento de itens, que podem ser
+            desafiadores com métodos de layout mais tradicionais. A aplicação de <code>flex-direction</code>,
+            <code>align-content</code>, <code>align-items</code>, e <code>flex-wrap</code> proporciona uma
+            flexibilidade significativa para ajustar o design do seu site em diferentes dispositivos e tamanhos de
+            tela. Com esses ajustes, você pode garantir que seu layout seja visualmente coeso, funcional e otimizado
+            para a melhor experiência do usuário.
+        </p>
         </section>
         <section class="referencias" id="referencias">
             <h1>Referencias</h1>

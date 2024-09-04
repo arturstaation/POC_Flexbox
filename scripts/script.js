@@ -17,3 +17,8 @@ function changeWrap(option, elemento) {
     const container = document.getElementById(elemento);
     container.style.flexWrap = option;
 }
+
+function changeJustifyContent(option, elemento) {
+    const container = document.getElementById(elemento);
+    container.style.justifyContent = option;
+}
