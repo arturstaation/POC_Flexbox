@@ -32,17 +32,17 @@
         <section class="definicao_flexbox separador_secao" id="definicao_flexbox">
             <h2>O que é FlexBox</h2>
             <div class="texto_definicao_flexbox">
-                <p>Durante muito tempo, as únicas tecnicas disponíveis para a criação de layouts usando CSS e
-                    posicionamento de elementos, e com boa compatibilidade entre browsers, eram float e position.
+                <p>Durante muito tempo, as únicas técnicas disponíveis para a criação de layouts usando CSS e
+                    posicionamento de elementos, e com boa compatibilidade entre navegadores, eram float e position.
                     Além disso, manipulações entre elementos pai-filho era uma outra tarefa complexa.
-                    Visto isso, essa ferramente foi criada para simplificar, sem perder a funcionalidade, essas tarefas,
-                    além de aumentar a eficiencia.
+                    Visto isso, essa ferramenta foi criada para simplificar, sem perder a funcionalidade, essas tarefas,
+                    além de aumentar a eficiência.
                 </p>
                 <h3>Que tal aprofundar mais um pouco essa definição?</h3>
                 <p>Flexbox, ou Flexible Box Layout, é um modelo de layout em CSS que facilita a criação de layouts
                     complexos e responsivos. Ele foi desenvolvido para resolver problemas comuns com o posicionamento e
                     alinhamento de elementos dentro de um contêiner.
-                    Alem disso, uma das principais ideias por trás desse recurso é possuir a habilidade de alterar o
+                    Além disso, uma das principais ideias por trás desse recurso é possuir a habilidade de alterar o
                     tamanho dos elementos de forma que preencham da melhor maneira o container onde estão inseridos.
                 </p>
             </div>
@@ -50,14 +50,14 @@
         <section class="principais_conceitos separador_secao" id="principais_conceitos">
             <h2>Principais Conceitos</h2>
             <div class="texto_principais_conceitos">
-                <p>Para entender e manipular melhor o layout flexivel, você precisa saber alguns conceitos.</p>
+                <p>Para entender e manipular melhor o layout flexível, você precisa saber alguns conceitos.</p>
                 <dl>
                     <dt><strong>Start</strong></dt>
                     <dd>É considerado o início do container flexível, sendo o ponto mais à esquerda no eixo horizontal
                         ou mais acima no eixo vertical.</dd>
 
                     <dt><strong>End</strong></dt>
-                    <dd>É considerado o final do container flexível, sendo o ponto mais à direita no eixo horizontal ou
+                    <dd>É considerado o final do contêiner flexível, sendo o ponto mais à direita no eixo horizontal ou
                         mais abaixo no eixo vertical.</dd>
 
                     <dt><strong>Eixo principal</strong></dt>
@@ -81,7 +81,7 @@
         <section class="usar_flexbox separador_secao" id="usar_flexbox">
             <h2>Como usar Flexbox</h2>
             <div class="texto_usar_flexbox">
-                <p>Agora que você já entende os conceitos básicos , vamos à prática. Para começar, adicione a seguinte
+                <p>Agora que você já entende os conceitos básicos, vamos à prática. Para começar, adicione a seguinte
                     propriedade ao seletor CSS do seu elemento: <code>display: flex</code> .</p>
                 <p>Mais importante do que saber como aplicar essa propriedade é entender quando e onde usá-la. A
                     propriedade Flexbox deve ser aplicada a um elemento pai para organizar o layout dos seus elementos
@@ -95,9 +95,9 @@
                 <h3>Orientação Eixo Principal</h3>
                 <p>O eixo principal, como dito anteriormente, define a direção na qual os elementos serão inseridos.
                     Para definir essa direção deve-se adicionar, além da propriedade para atribuir ao componente o
-                    display flexivel, a propriedade <code>flex-direction</code> .
-                    No entanto, ela por si so não muda nada. Para que ela tenha funcionamento adequado deve-se
-                    atribuir um parametro a ela. Esses parametros podem ser:
+                    display flexível, a propriedade <code>flex-direction</code> .
+                    No entanto, ela por si só não muda nada. Para que ela tenha funcionamento adequado deve-se
+                    atribuir um parâmetro a ela. Esses parâmetros podem ser:
                 </p>
                 <dl>
                     <dt><strong>row</strong></dt>
@@ -139,13 +139,13 @@
                 </div>
             </div>
             <div class="orientacao_secundaria">
-                <h3>Orientação Eixo Secundario</h3>
+                <h3>Orientação Eixo Secundário</h3>
                 <p>O eixo secundário, como mencionado anteriormente, é perpendicular ao eixo principal e define como os
                     elementos são alinhados ao longo da sua direção.
                     Para controlar o alinhamento dos itens ao longo do eixo secundário, além de definir o contêiner com
                     o display flexível, você deve usar a propriedade <code>align-items</code>. A propriedade <code>align-items</code> é
                     aplicada aos itens individuais.
-                    Assim como com o eixo principal, essa propriedade não tera efeito sozinho e precisa de
+                    Assim como com o eixo principal, essa propriedade não terá efeito sozinha e precisa de
                     parâmetros específicos para funcionar corretamente:
                 </p>
                 <dl>
@@ -210,8 +210,8 @@
                     Esta propriedade é usada para distribuir o espaço restante ao longo do eixo principal e alinha os itens dentro do contêiner flexível. 
                     É particularmente útil para centralizar, alinhar ou distribuir itens de forma equitativa.
                     Para definir essa direção deve-se adicionar, além da propriedade para atribuir ao componente o
-                    display flexivel, a propriedade <code>justify-content</code>. No entanto, ela por si so não muda nada. Para que ela tenha funcionamento adequado deve-se
-                    atribuir um parametro a ela. Esses parametros podem ser:</p>
+                    display flexível, a propriedade <code>justify-content</code>. No entanto, ela por si so não muda nada. Para que ela tenha funcionamento adequado deve-se
+                    atribuir um parâmetro a ela. Esses parâmetros podem ser:</p>
                 
 
                     <dl>
@@ -304,12 +304,12 @@
         </section>
 
         <section class="orientar_wrap separador_secao" id="orientar_wrap">
-            <h2>Disposição das Lihas</h2>
+            <h2>Disposição das Linhas</h2>
             <div class="orientacao_secundaria">
                 <p>
                     Para controlar o alinhamento das linhas ao longo do eixo secundário, além de definir o contêiner com
                     o display flexível, você deve usar a propriedade <code>align-content</code>.
-                    Assim como as outras, essa propriedades não tera efeito sozinha, e precisa de
+                    Assim como as outras, essa propriedade não terá efeito sozinha, e precisa de
                     parâmetros específicos para funcionar corretamente:
                 </p>
                 <dl>
@@ -390,7 +390,7 @@
 
             <div class="aplicacao_flex-direction">
 
-                <h2>Exemplo De Flex-Direction</h2>
+                <h2>Exemplo de Flex-Direction</h2>
                 <p><strong>Antes:</strong> Um layout de cartões projetado com <code>flex-direction: row;</code> pode
                     funcionar bem em uma tela de computador, exibindo todos os cartões lado a lado. No entanto, quando
                     acessado em um celular, o layout pode ultrapassar o limite da tela, forçando o usuário a rolar
@@ -441,7 +441,7 @@
             </div>
 
                 <div class="aplicacao_flex-wrap">
-                    <h2>Exemplo De Flex-Wrap</h2>
+                    <h2>Exemplo de Flex-Wrap</h2>
                     <p><strong>Antes:</strong> Com <code>flex-wrap: nowrap;</code>, uma galeria de imagens pode se estender
                         horizontalmente sem limites, criando uma barra de rolagem horizontal em dispositivos móveis. Esse
                         problema ocorre porque todos os itens são forçados a permanecer em uma única linha, causando rolagem
@@ -496,7 +496,7 @@
             </div>
 
             <div class = "aplicacao_align-items">
-                <h2>Exemplo De Align-Items</h2>
+                <h2>Exemplo de Align-Items</h2>
         <p><strong>Antes:</strong> Com <code>align-items: flex-start;</code>, os itens dentro do contêiner são alinhados no início do eixo transversal. Isso pode resultar em um alinhamento desordenado, especialmente quando os itens têm diferentes alturas.</p>
         <div class="container_prova">
             <div>
@@ -521,7 +521,7 @@
 
         </div>
         <div class = "aplicacao_align-content">
-            <h2>Exemplo De Align-Content</h2>
+            <h2>Exemplo de Align-Content</h2>
             <p><strong>Antes:</strong> Com <code>align-content: flex-start;</code>, as linhas de itens são alinhadas no início do eixo transversal, deixando o espaço restante no final do contêiner. Isso pode resultar em um layout desalinhado se houver muito espaço no final do contêiner.</p>
             <div class="container_prova">
                 <div>
@@ -557,7 +557,7 @@
 
 
         <div class = "aplicacao_justify-content">
-            <h2>Exemplo De Justify-Content: Space-Evenly</h2>
+            <h2>Exemplo de Justify-Content: Space-Evenly</h2>
         <p><strong>Antes:</strong> Com <code>justify-content: flex-start;</code>, os itens são alinhados no início do eixo principal, deixando qualquer espaço restante no final do contêiner. Isso pode resultar em um layout desbalanceado se houver muito espaço disponível no final.</p>
         <div class="container_prova">
             <div>
