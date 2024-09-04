@@ -31,21 +31,21 @@ Se precisar de ajuda adicional ou encontrar algum problema, sinta-se à vontade 
 
 ## Introdução
 
-Durante muito tempo, as únicas tecnicas disponíveis para a criação de layouts usando CSS e posicionamento de elementos, e com boa compatibilidade entre browsers, eram float e position. Além disso, manipulações entre elementos pai-filho era uma outra tarefa complexa. Visto isso, essa ferramente foi criada para simplificar, sem perder a funcionalidade, essas tarefas,além de aumentar a eficiencia.
+Durante muito tempo, as únicas técnicas disponíveis para a criação de layouts usando CSS e posicionamento de elementos, e com boa compatibilidade entre navegadores, eram float e position. Além disso, manipulações entre elementos pai-filho era uma outra tarefa complexa. Visto isso, essa ferramenta foi criada para simplificar, sem perder a funcionalidade, essas tarefas, além de aumentar a eficiência.
 
 ## O que é Flexbox?
 
-Flexbox, ou Flexible Box Layout, é um modelo de layout em CSS que facilita a criação de layouts complexos e responsivos. Ele foi desenvolvido para resolver problemas comuns com o posicionamento e alinhamento de elementos dentro de um contêiner. Alem disso, uma das principais ideias por trás desse recurso é possuir a habilidade de alterar o tamanho dos elementos de forma que preencham da melhor maneira o container onde estão inseridos.
+Flexbox, ou Flexible Box Layout, é um modelo de layout em CSS que facilita a criação de layouts complexos e responsivos. Ele foi desenvolvido para resolver problemas comuns com o posicionamento e alinhamento de elementos dentro de um contêiner. Além disso, uma das principais ideias por trás desse recurso é possuir a habilidade de alterar o tamanho dos elementos de forma que preencham da melhor maneira o contêiner onde estão inseridos.
 
 ## Principais Conceitos
 
 Para entender e manipular melhor o layout flexível, você precisa saber alguns conceitos.
 
 **Start**  
-É considerado o início do container flexível, sendo o ponto mais à esquerda no eixo horizontal ou mais acima no eixo vertical.
+É considerado o início do contêiner flexível, sendo o ponto mais à esquerda no eixo horizontal ou mais acima no eixo vertical.
 
 **End**  
-É considerado o final do container flexível, sendo o ponto mais à direita no eixo horizontal ou mais abaixo no eixo vertical.
+É considerado o final do contêiner flexível, sendo o ponto mais à direita no eixo horizontal ou mais abaixo no eixo vertical.
 
 **Eixo principal**  
 O eixo principal, ou primário, é aquele que define a direção onde serão inseridos os itens.
