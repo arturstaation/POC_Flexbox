@@ -1,4 +1,4 @@
-/* Reset Básico */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,15 +6,12 @@
     font-family: Arial, sans-serif;
 }
 
-/* Corpo e Layout */
 body {
     margin-left: 250px;
-    /* Espaço para o cabeçalho fixo */
     background-color: #f4f4f4;
     color: #333;
 }
 
-/* Cabeçalho Fixo */
 header {
     background-color: #007bff;
     color: #fff;
@@ -24,11 +21,14 @@ header {
     left: 0;
     height: 100%;
     width: 250px;
-    /* Largura do cabeçalho fixo */
     z-index: 1000;
-    /* Garantir que o cabeçalho esteja acima de outros elementos */
     overflow-y: auto;
-    /* Permite rolar se o conteúdo for maior que a tela */
+    
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
 }
 
 header nav ul {
@@ -51,7 +51,7 @@ header nav ul li a:hover {
     text-decoration: underline;
 }
 
-/* Main Banner */
+
 .banner_inicial {
     background: linear-gradient(45deg, #007bff, #00d2ff);
     color: #fff;
@@ -64,7 +64,7 @@ header nav ul li a:hover {
     font-size: 2.5em;
 }
 
-/* Seções */
+
 main {
     padding: 20px;
 }
@@ -94,7 +94,7 @@ code {
     border-radius: 3px;
 }
 
-/* Lista de Conceitos e Referências */
+
 dl {
     margin: 20px 0;
 }
@@ -108,11 +108,11 @@ dd {
     margin-left: 20px;
 }
 
-/* Containers de Exemplo e Botões */
+
 .exemplo {
     display: flex;
     gap: 20px;
-    /* Espaço entre as colunas */
+  
     margin-bottom: 20px;
 }
 
@@ -147,12 +147,12 @@ dd {
     text-align: center;
 }
 
-/* Botões */
+
 .botoes_exemplo {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    /* Alinha os botões à esquerda */
+  
 }
 
 .botoes_exemplo h4 {
@@ -174,7 +174,7 @@ dd {
     background-color: #0056b3;
 }
 
-/* Seção de Pratica */
+
 .container_prova {
     display: flex;
     flex-direction: row;
@@ -259,7 +259,7 @@ dd {
     margin-left: 100px;
 }
 
-/* Seção de Referências */
+
 .referencias {
     margin-top: 40px;
 }
@@ -287,7 +287,7 @@ dd {
     text-decoration: underline;
 }
 
-/* Imagem */
+
 
 .imagem_fb{
     width: 700px;
@@ -300,19 +300,19 @@ dd {
     border: 1px solid #ccc;
     padding: 10px;
     margin: 5px;
-    flex: 1 1 100px; /* Flex item que se ajusta, com uma largura mínima */
+    flex: 1 1 100px; 
     text-align: center;
 }
 
-/* Estilo para o estado "Antes" */
+
 .antes {
     display: flex;
-    align-content: flex-start; /* Espaço excessivo no fundo do contêiner */
+    align-content: flex-start;
 }
 
-/* Estilo para o estado "Depois" */
+
 .depois {
-    align-content: center; /* Espaço é distribuído de forma mais equilibrada */
+    align-content: center;
 }
 .row{
     flex-direction: row;
@@ -324,3 +324,6 @@ dd {
     flex-wrap: nowrap;
 }
 
+.autores{
+    margin: 5px 0px;
+}
