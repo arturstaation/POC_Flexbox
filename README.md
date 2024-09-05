@@ -1,5 +1,9 @@
 # Flexbox
 
+##Grupo
+Artur Valladares Hernandez Giacummo - 10389053
+Gabriel Marques Gonçalves Almeida - 10375711
+
 ## Como Executar o Código
 
 Para acessar o site proposto por esta prova de conceito (POC), você tem duas opções:
