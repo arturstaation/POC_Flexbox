@@ -2,7 +2,7 @@
 
 ## Grupo
 
-Artur Valladares Hernandez Giacummo - 10389053
+Artur Valladares Hernandez Giacummo - 10389053 <br>
 Gabriel Marques Gonçalves Almeida - 10375711
 
 ## Como Executar o Código
